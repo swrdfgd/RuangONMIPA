@@ -99,7 +99,7 @@
         <div class="max-w-4xl mx-auto relative z-10">
             <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-4 tracking-wide text-amber-50">Ruang ONMIPA</h1>
             <p class="text-lg md:text-xl text-emerald-100 font-light max-w-2xl mx-auto italic font-serif">
-                Repositori Naskah Soal & Pembahasan Olimpiade Nasional MIPA
+                Arsip Naskah Soal & Pembahasan ONMIPA Matematika
             </p>
             <div class="mt-8 flex justify-center items-center opacity-75">
                 <div class="w-12 h-px bg-amber-500"></div>
@@ -117,9 +117,6 @@
     <!-- Footer -->
     <footer class="bg-emerald-950 text-emerald-200/60 py-8 text-center mt-12">
         <div class="max-w-4xl mx-auto px-6">
-            <p class="text-sm">
-                &copy; 2026 <span class="text-emerald-100 font-serif italic">Ruang ONMIPA</span> | Tema: संस्थापक
-            </p>
         </div>
     </footer>
 
@@ -338,7 +335,7 @@
                     // Generate Tombol Soal
                     catData.questions.forEach(qNum => {
                         html += `
-                                            <a href="${qNum.link}" 
+                                            <a href="${qNum.link}" target="_blank"
                                                class="border-classic bg-white text-emerald-900 hover:bg-emerald-900 hover:text-amber-400 font-semibold py-2 rounded text-center transition-all">
                                                 ${qNum.name}
                                             </a>
