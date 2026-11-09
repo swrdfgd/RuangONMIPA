@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="swrdfgd">
+    <title>ONMIPA Wilayah 2007 - Struktur Aljabar - Bagian Kedua - No. 1 | Ruang ONMIPA</title>
+    
+    <!-- 1. FONT & STYLING -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'], serif: ['Merriweather', 'serif'] },
+                    colors: { emerald: { 800: '#065f46', 900: '#064e3b', 950: '#022c22' }, amber: { 500: '#f59e0b', 600: '#d97706' } }
+                }
+            }
+        }
+    </script>
+
+    <!-- 2. MATHJAX (Tanpa Polyfill) -->
+    <script>
+        MathJax = {
+            tex: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased min-h-screen flex flex-col">
+
+    <!-- ================= NAVBAR GLOBAL ================= -->
+    <nav class="bg-emerald-950 text-white shadow-lg border-b-4 border-amber-500 sticky top-0 z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+            <a href="../index.html" class="flex items-center gap-3 font-serif text-xl font-bold hover:text-amber-500 transition">
+                <svg class="w-8 h-8 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                Ruang ONMIPA
+            </a>
+        </div>
+    </nav>
+
+    <!-- ================= MULAI AREA KONTEN SOAL (EDIT DI SINI) ================= -->
+    <main class="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-8 max-w-4xl">
+        
+        <!-- Breadcrumb Navigasi -->
+		<!-- Breadcrumb sebagai penunjuk teks murni (Sangat direkomendasikan jika semua menu ada di SPA index.html) -->
+		<div class="mb-6 flex flex-wrap items-center text-sm text-gray-500 gap-2">
+			<a href="../index.html" class="hover:text-emerald-800 flex items-center gap-1">
+				<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+				Beranda
+			</a> 
+			<span>/</span>
+			<span class="text-gray-600">Tingkat Wilayah (2007)</span> 
+			<span>/</span>
+			<span class="text-gray-600">Struktur Aljabar</span> 
+			<span>/</span>
+			<span class="text-gray-600">Bagian Kedua</span> 
+			<span>/</span>
+			<span class="text-emerald-900 font-semibold">Soal No. 1</span>
+		</div>
+
+        <!-- Judul Halaman -->
+        <div class="mb-8">
+            <h1 class="font-serif text-3xl font-bold text-emerald-950 mb-2">Soal Bagian Kedua - Nomor 1</h1>
+            <p class="text-gray-600 font-medium">Seleksi Tingkat Wilayah ONMIPA-PT 2007 — Bidang Struktur Aljabar</p>
+        </div>
+
+        <!-- Teks Soal -->
+        <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden mb-6">
+            <div class="bg-emerald-50 border-b border-emerald-100 px-6 py-4">
+                <h2 class="font-bold text-emerald-900">Naskah Soal</h2>
+            </div>
+            <div class="px-6 py-8 text-lg leading-relaxed text-gray-800 space-y-4">
+                <p>Misalkan \(G\) suatu grup dan \(K\subseteq G\) subgrup dari \(G\) dengan indeks \(K\) di \(G\) yaitu \(\left[G:K\right]=23\).</p>
+				<p>(a) Tentukan semua subgrup dari \(G\) yang mengandung \(K\).</p>
+				<p>(b) Jika \(G\) grup komutatif dan orde dari \(K\) yaitu \(|K|=5\), tunjukkan bahwa \(G\) grup siklis.
+            </div>
+        </div>
+
+        <!-- Tombol Toggle Pembahasan (Biarkan Saja) -->
+        <div class="text-center mb-6">
+            <button id="btnToggle" class="bg-emerald-900 hover:bg-emerald-800 text-white font-semibold py-3 px-8 rounded-full shadow-md transition-all">
+                Lihat Pembahasan
+            </button>
+        </div>
+
+        <!-- Teks Pembahasan -->
+        <div id="boxPembahasan" class="hidden bg-white rounded-xl shadow-md border-t-4 border-amber-500 overflow-hidden mb-12">
+            <div class="bg-gray-50 border-b border-gray-100 px-6 py-4">
+                <h2 class="font-bold text-gray-900">Alternatif Penyelesaian</h2>
+            </div>
+            <div class="px-6 py-8 text-md leading-relaxed text-gray-800 space-y-4">
+				<h3><u class="bg-yellow-200">Bagian (a)</u></h3>
+				<p>Misalkan \(H\) subgrup dari \(G\) yang memuat \(K\), atau \(K\subseteq H\subseteq G\). Menurut <a href="https://en.wikipedia.org/wiki/Lagrange%27s_theorem_(group_theory)" target="_blank" class="text-blue-600">Teorema Lagrange</a>, indeks dari \(H\) di \(G\) adalah</p>
+				<div class="bg-gray-100 p-4 rounded-lg text-center overflow-x-auto">
+                    \[
+					\left[G:H\right]=\frac{|G|}{|H|}=\frac{|G|/|K|}{|H|/|K|}=\frac{[G:K]}{[H:K]}=\frac{23}{[H:K]}.
+					\]
+                </div> 	            
+				<p>Karena \([G:H]\) bilangan bulat positif dan 23 merupakan bilangan prima, maka haruslah \([H:K]=1\) atau \([H:K]=23\). Jika \([H:K]=1\) maka \(H=K\), sedangkan \([H:K]=23\) mengakibatkan \(H=G\).</p>
+				<p>Jadi, semua subgrup yang memuat \(K\) hanyalah \(K\) dan \(G\).</p>
+				
+				<h3><u class="bg-yellow-200">Bagian (b)</u></h3>
+				<p>Menurut Teorema Lagrange, \(|G|=|K|\cdot [G:K]=5\cdot 23 = 115\).</p>
+				<p>Untuk menunjukkan bahwa \(G\) siklis, harus ditunjukkan bahwa terdapat \(g\in G\) dengan \(\text{ord} (g)=115\).</p>
+				<p>Menurut <a href="https://en.wikipedia.org/wiki/Cauchy%27s_theorem_(group_theory)" target="_blank" class="text-blue-600">Teorema Cauchy</a>, terdapat \(a,b\in G\) sehingga \(a\) berorde 5 dan \(b\) berorde 23.</p>
+				<p>Misalkan \(A\) dan \(B\) berturut-turut adalah subgrup yang dibangun oleh \(a\) dan \(b\) (atau dinotasikan \(A=\left\langle a \right\rangle\) dan \(B=\left\langle b \right\rangle\)).</p>
+				<p>Karena \(|A|=5\) dan \(|B|=23\) serta \(\gcd (5,23)=1\), diperoleh \(A\cap B = \{e\}\).</p>
+				<p>Misalkan \((ab)^i=e\) untuk suatu \(i&gt;0\). Karena \(G\) komutatif, maka \(e=(ab)^i=a^i b^i\). Ini menunjukkan bahwa \(a^i = b^{-i} \in (A \cap B) = \{e\}\), sehingga \(a^i = e\) yang mengakibatkan \(5|i\) dan \(b^i=e\) yang mengakibatkan \(23|i\).</p>
+				<p>Selanjutnya, karena \(\gcd (5,23)=1\) serta 5 dan 23 membagi \(i\) maka \(5\cdot 23 = 115\) membagi \(i\). Berarti \(i \geq 115\).</p>
+				<p>Karena \((ab)^{115} = a^{115} b^{115} = e\), maka 115 adalah bilangan bulat positif terkecil sehingga \((ab)^i=e\). Ini menunjukkan bahwa \(g=ab\) berorde 115 sehingga \(ab\) membangun \(G\) dan \(G\) siklis. Terbukti.</p>
+				
+			</div>
+        </div>
+
+        <!-- Navigasi Bawah -->
+        <div class="flex flex-col sm:flex-row justify-between items-center gap-4 pt-6 border-t border-gray-200">
+            <a href="#" class="w-full sm:w-auto text-center px-6 py-2 border border-gray-300 rounded-lg hover:bg-gray-100 font-medium">&larr; Soal Sebelumnya</a>
+            <a href="#" class="w-full sm:w-auto text-center px-6 py-2 bg-amber-500 hover:bg-amber-600 text-emerald-950 rounded-lg shadow font-bold">Soal Berikutnya &rarr;</a>
+        </div>
+    </main>
+    <!-- ================= AKHIR AREA KONTEN SOAL ================= -->
+
+    <!-- ================= FOOTER GLOBAL ================= -->
+    <footer class="bg-emerald-950 text-emerald-200 py-8 border-t border-emerald-900 mt-auto">
+        <div class="container mx-auto px-4 text-center">
+            <p class="font-serif text-amber-500 mb-2">Ruang ONMIPA</p>
+            <p class="text-sm">Arsip dan Pembahasan Soal ONMIPA-PT.</p>
+        </div>
+    </footer>
+
+    <!-- ================= SCRIPT INTERAKSI (Biarkan Saja) ================= -->
+    <script>
+        document.getElementById('btnToggle').addEventListener('click', function() {
+            const box = document.getElementById('boxPembahasan');
+            const isHidden = box.classList.contains('hidden');
+            
+            if (isHidden) {
+                box.classList.remove('hidden');
+                this.textContent = 'Tutup Pembahasan';
+                this.classList.replace('bg-emerald-900', 'bg-gray-200');
+                this.classList.replace('hover:bg-emerald-800', 'hover:bg-gray-300');
+                this.classList.replace('text-white', 'text-gray-800');
+            } else {
+                box.classList.add('hidden');
+                this.textContent = 'Lihat Pembahasan';
+                this.classList.replace('bg-gray-200', 'bg-emerald-900');
+                this.classList.replace('hover:bg-gray-300', 'hover:bg-emerald-800');
+                this.classList.replace('text-gray-800', 'text-white');
+            }
+        });
+    </script>
+</body>
+</html>
