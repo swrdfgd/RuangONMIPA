@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donasi & Request Soal - swrdfgd</title>
+    
+    <!-- Memuat Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Konfigurasi Tema Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        emerald: {
+                            900: '#064e3b',
+                            950: '#022c22',
+                        },
+                        amber: {
+                            500: '#f59e0b',
+                            600: '#d97706',
+                        },
+                        paper: '#fdfbf7',
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Inter"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Memuat Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            background-color: theme('colors.paper');
+        }
+        .border-classic {
+            border: 1px solid theme('colors.emerald.900');
+            box-shadow: 4px 4px 0px 0px theme('colors.emerald.900');
+            transition: all 0.2s ease;
+        }
+        .border-classic:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 6px 6px 0px 0px theme('colors.emerald.900');
+        }
+    </style>
+</head>
+<body class="font-sans text-emerald-950 min-h-screen flex flex-col justify-center items-center p-6 py-12">
+
+    <!-- Navigasi Kembali -->
+    <div class="w-full max-w-lg mb-6">
+        <a href="index.html" class="inline-flex items-center text-emerald-800 hover:text-amber-600 font-medium transition-colors">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+            Kembali ke Beranda
+        </a>
+    </div>
+
+    <!-- Card Utama -->
+    <main class="w-full max-w-lg bg-white rounded-xl shadow-lg border border-emerald-900/10 overflow-hidden relative">
+        
+        <!-- Header Card -->
+        <div class="h-3 bg-amber-500 w-full"></div>
+        <div class="bg-emerald-900 px-8 py-6 text-center relative overflow-hidden">
+            <div class="absolute inset-0 opacity-10" style="background-image: repeating-linear-gradient(45deg, #000 0, #000 2px, transparent 2px, transparent 8px);"></div>
+            <h1 class="font-serif text-3xl md:text-4xl font-bold text-amber-50 relative z-10">Donasi & Request</h1>
+            <p class="text-emerald-100/80 mt-2 text-sm relative z-10">Dukung operasional swrdfgd dan request pembahasan spesifik.</p>
+        </div>
+
+        <div class="p-6 md:p-8">
+            
+            <!-- Kotak Penjelasan Request Soal -->
+            <div class="bg-emerald-50/50 border-l-4 border-amber-500 p-4 mb-8 rounded-r-lg text-sm text-emerald-900 leading-relaxed">
+                <p class="mb-3">
+                    Pembahasan soal di halaman utama ditambahkan <strong>secara acak</strong>. Kalau kamu butuh pembahasan untuk soal tertentu, kamu bisa berdonasi sekaligus menuliskan request di kolom <strong>"Pesan"</strong> pada Saweria.
+                </p>
+                <ul class="list-disc list-inside space-y-1 ml-1 mb-3 text-emerald-800 font-medium">
+                    <li><strong>Soal ONMIPA:</strong> Cantumkan Tahun, Tingkat (Wil/Nas), dan Nomor Soal.</li>
+                    <li><strong>Luar ONMIPA:</strong> Tuliskan detail soal atau sertakan link soalnya.</li>
+                </ul>
+                <p class="text-emerald-900/60 italic text-xs">
+                    * Catatan: Kalau pesan request soal tidak spesifik atau dibiarkan kosong, pembahasan soal akan dipilih secara acak.
+                </p>
+            </div>
+
+            <!-- Bagian QR Code -->
+            <div class="mb-8 text-center">
+                <p class="text-sm text-emerald-900/70 font-semibold mb-3 tracking-wide uppercase">Scan QR Code</p>
+                
+                <div class="bg-white border-2 border-dashed border-emerald-200 rounded-xl p-3 w-60 h-60 mx-auto flex justify-center items-center shadow-sm">
+                    <img src="qr-saweria.png" alt="QR Code Saweria swrdfgd" class="w-full h-full object-contain rounded-lg" onerror="this.outerHTML='<span class=\'text-emerald-800/40 text-sm text-center\'></span>'">
+                </div>
+            </div>
+
+            <div class="flex items-center justify-center my-6 opacity-50">
+                <div class="w-16 h-px bg-emerald-900"></div>
+                <span class="mx-4 font-serif text-emerald-900 italic text-sm">atau</span>
+                <div class="w-16 h-px bg-emerald-900"></div>
+            </div>
+
+
+            <a href="https://saweria.co/kindknow" target="_blank" rel="noopener noreferrer" class="border-classic block w-full py-3.5 px-4 bg-amber-400 hover:bg-amber-300 text-emerald-950 font-bold font-sans rounded text-center transition-all flex justify-center items-center gap-2">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg>
+                Donasi & Request via Link Saweria
+            </a>
+
+        </div>
+    </main>
+
+</body>
+</html>
